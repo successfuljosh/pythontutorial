@@ -1,1 +1,1 @@
-web: gunicorn staffapp.staffapp.py:app
+web: gunicorn wsgi:app

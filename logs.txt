@@ -1,0 +1,100 @@
+2020-04-15T04:32:58.860715+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+2020-04-15T04:32:58.861175+00:00 app[web.1]: self.sleep()
+2020-04-15T04:32:58.861206+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2020-04-15T04:32:58.861575+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2020-04-15T04:32:58.861604+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2020-04-15T04:32:58.861893+00:00 app[web.1]: self.reap_workers()
+2020-04-15T04:32:58.861926+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2020-04-15T04:32:58.862338+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2020-04-15T04:32:58.862509+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2020-04-15T04:32:58.862534+00:00 app[web.1]: 
+2020-04-15T04:32:58.862535+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2020-04-15T04:32:58.862536+00:00 app[web.1]: 
+2020-04-15T04:32:58.862568+00:00 app[web.1]: Traceback (most recent call last):
+2020-04-15T04:32:58.862597+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2020-04-15T04:32:58.862812+00:00 app[web.1]: sys.exit(run())
+2020-04-15T04:32:58.862844+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+2020-04-15T04:32:58.863074+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2020-04-15T04:32:58.863104+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 228, in run
+2020-04-15T04:32:58.863404+00:00 app[web.1]: super().run()
+2020-04-15T04:32:58.863433+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+2020-04-15T04:32:58.863654+00:00 app[web.1]: Arbiter(self).run()
+2020-04-15T04:32:58.863681+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 229, in run
+2020-04-15T04:32:58.863970+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2020-04-15T04:32:58.864003+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+2020-04-15T04:32:58.864356+00:00 app[web.1]: self.stop()
+2020-04-15T04:32:58.864386+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 393, in stop
+2020-04-15T04:32:58.864777+00:00 app[web.1]: time.sleep(0.1)
+2020-04-15T04:32:58.864808+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2020-04-15T04:32:58.865086+00:00 app[web.1]: self.reap_workers()
+2020-04-15T04:32:58.865118+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2020-04-15T04:32:58.865383+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2020-04-15T04:32:58.865451+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2020-04-15T04:32:58.975050+00:00 heroku[web.1]: State changed from up to crashed
+2020-04-15T04:32:58.978503+00:00 heroku[web.1]: State changed from crashed to starting
+2020-04-15T04:33:00.000000+00:00 app[api]: Build succeeded
+2020-04-15T04:33:06.669822+00:00 app[web.1]: [2020-04-15 04:33:06 +0000] [4] [INFO] Starting gunicorn 20.0.4
+2020-04-15T04:33:06.670449+00:00 app[web.1]: [2020-04-15 04:33:06 +0000] [4] [INFO] Listening at: http://0.0.0.0:46361 (4)
+2020-04-15T04:33:06.670614+00:00 app[web.1]: [2020-04-15 04:33:06 +0000] [4] [INFO] Using worker: sync
+2020-04-15T04:33:06.674963+00:00 app[web.1]: [2020-04-15 04:33:06 +0000] [9] [INFO] Booting worker with pid: 9
+2020-04-15T04:33:06.713721+00:00 app[web.1]: [2020-04-15 04:33:06 +0000] [10] [INFO] Booting worker with pid: 10
+2020-04-15T04:33:07.300732+00:00 heroku[web.1]: State changed from starting to up
+2020-04-15T04:33:07.251543+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [10] [ERROR] Exception in worker process
+2020-04-15T04:33:07.251571+00:00 app[web.1]: Traceback (most recent call last):
+2020-04-15T04:33:07.251572+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2020-04-15T04:33:07.251573+00:00 app[web.1]: worker.init_process()
+2020-04-15T04:33:07.251573+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+2020-04-15T04:33:07.251574+00:00 app[web.1]: self.load_wsgi()
+2020-04-15T04:33:07.251574+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+2020-04-15T04:33:07.251574+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2020-04-15T04:33:07.251575+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2020-04-15T04:33:07.251575+00:00 app[web.1]: self.callable = self.load()
+2020-04-15T04:33:07.251576+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+2020-04-15T04:33:07.251576+00:00 app[web.1]: return self.load_wsgiapp()
+2020-04-15T04:33:07.251576+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+2020-04-15T04:33:07.251577+00:00 app[web.1]: return util.import_app(self.app_uri)
+2020-04-15T04:33:07.251577+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+2020-04-15T04:33:07.251577+00:00 app[web.1]: mod = importlib.import_module(module)
+2020-04-15T04:33:07.251578+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
+2020-04-15T04:33:07.251578+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2020-04-15T04:33:07.251579+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2020-04-15T04:33:07.251579+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2020-04-15T04:33:07.251579+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+2020-04-15T04:33:07.251580+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2020-04-15T04:33:07.251580+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2020-04-15T04:33:07.251580+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2020-04-15T04:33:07.251581+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+2020-04-15T04:33:07.251581+00:00 app[web.1]: ModuleNotFoundError: No module named 'staffapp.staffapp'
+2020-04-15T04:33:07.251800+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [10] [INFO] Worker exiting (pid: 10)
+2020-04-15T04:33:07.297305+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [9] [ERROR] Exception in worker process
+2020-04-15T04:33:07.297307+00:00 app[web.1]: Traceback (most recent call last):
+2020-04-15T04:33:07.297308+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+2020-04-15T04:33:07.297308+00:00 app[web.1]: worker.init_process()
+2020-04-15T04:33:07.297309+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 119, in init_process
+2020-04-15T04:33:07.297309+00:00 app[web.1]: self.load_wsgi()
+2020-04-15T04:33:07.297309+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+2020-04-15T04:33:07.297310+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2020-04-15T04:33:07.297310+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2020-04-15T04:33:07.297311+00:00 app[web.1]: self.callable = self.load()
+2020-04-15T04:33:07.297311+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+2020-04-15T04:33:07.297311+00:00 app[web.1]: return self.load_wsgiapp()
+2020-04-15T04:33:07.297312+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+2020-04-15T04:33:07.297312+00:00 app[web.1]: return util.import_app(self.app_uri)
+2020-04-15T04:33:07.297313+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 358, in import_app
+2020-04-15T04:33:07.297313+00:00 app[web.1]: mod = importlib.import_module(module)
+2020-04-15T04:33:07.297314+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
+2020-04-15T04:33:07.297314+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2020-04-15T04:33:07.297314+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2020-04-15T04:33:07.297315+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2020-04-15T04:33:07.297316+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+2020-04-15T04:33:07.297316+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2020-04-15T04:33:07.297316+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2020-04-15T04:33:07.297317+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2020-04-15T04:33:07.297317+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+2020-04-15T04:33:07.297318+00:00 app[web.1]: ModuleNotFoundError: No module named 'staffapp.staffapp'
+2020-04-15T04:33:07.297621+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [9] [INFO] Worker exiting (pid: 9)
+2020-04-15T04:33:07.443537+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [4] [INFO] Shutting down: Master
+2020-04-15T04:33:07.443719+00:00 app[web.1]: [2020-04-15 04:33:07 +0000] [4] [INFO] Reason: Worker failed to boot.
+2020-04-15T04:33:07.673640+00:00 heroku[web.1]: State changed from up to crashed
+2020-04-15T04:34:00.922790+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=staffmanagementapp.herokuapp.com request_id=1dccf55b-3041-4b18-b25f-685ad853b382 fwd="197.210.52.155" dyno= connect= service= status=503 bytes= protocol=https
+2020-04-15T04:34:01.524565+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=staffmanagementapp.herokuapp.com request_id=39b53d63-44f8-40c0-b0af-2299aaf037b9 fwd="197.210.52.130" dyno= connect= service= status=503 bytes= protocol=https
