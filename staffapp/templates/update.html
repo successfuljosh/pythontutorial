@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h2 class="title">Add Staff</h2>
+    <hr>
+    <br>
+    <br>
+    <form method="POST" action="">
+
+                <div class="input-group">
+                    <label class="label">First Name</label>
+                    <input class="input--style-4" type="text" value="{{ staff.firstName }}" name="first_name" required>
+                </div>
+        
+                <div class="input-group">
+                    <label class="label">Last Name</label>
+                    <input class="input--style-4" type="text" value="{{ staff.lastName }}" name="last_name" required>
+                </div>
+                <div class="input-group">
+                    <label class="label">Email Address</label>
+                    <input class="input--style-4" type="email" value="{{ staff.email }}" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label class="label">Password</label>
+                    <input class="input--style-4" type="password" value="{{ staff.password }}" name="password" required>
+                </div>
+        
+                <div class="input-group">
+                    <label class="label">Function</label>
+                    <input class="input--style-4" type="text" value="{{ staff.function }}" name="function" required>
+                </div>
+
+        <div class="p-t-15">
+            <button class="btn btn-primary" type="submit">Update Staff</button>
+        </div>
+    </form>
+{% endblock %}

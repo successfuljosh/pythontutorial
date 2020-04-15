@@ -1,0 +1,24 @@
+{% extends 'loginlayout.html' %}
+
+{% block content %}
+                    <form method="POST" action="">
+
+                                <div class="input-group">
+                                    <label class="label">Email Address</label>
+                                    <input class="input--style-4" type="email" name="email" required>
+                                </div>
+                        
+                                <div class="input-group">
+                                    <label class="label">Password</label>
+                                    <input class="input--style-4" type="password" name="password" required>
+                                </div>
+
+
+
+                        <div class="p-t-15">
+                            <button class="btn btn-primary" type="submit">Login</button>
+                        </div>
+                        <h6>  <a href="{{ url_for('register') }}">Click here to Register</a></h6>
+
+                    </form>
+{% endblock %}

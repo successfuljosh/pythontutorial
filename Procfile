@@ -1,0 +1,1 @@
+web: gunicorn staffapp.staffapp.py:app

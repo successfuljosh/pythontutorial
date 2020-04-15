@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>{{ title }} Page</title>
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" media="all">
+
+
+    <style rel="stylesheet" type="text/css">
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+   margin-top: 50px;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+/*  background-color: #eee;*/
+  overflow-x: hidden;
+  padding-top: 30px;
+}
+
+.sidenav a {
+  padding: 6px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: blue;
+}
+
+.main {
+  margin-top: 50px;
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 20px;}
+}
+</style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('home') }}">School Management System</a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+        <span class="navbar-text">
+         {{ admin.firstName +' ' +admin.lastName }}
+        </span>
+         <a class="nav-link" href="{{ url_for('logout') }}">Sign Out</a>
+      </div>
+    </nav>
+
+
+    <div class="sidenav">
+
+      <a class="nav-link active" href="{{ url_for('home') }}">View Staffs</a>
+      <a class="nav-link" href="{{ url_for('addstaff') }}">Add Staff</a>
+    </div>
+
+    <div class="main">
+        <div class="card card-4">
+          <div class="card-header">{{ message }}</div>
+            <div class="card-body">             
+              {% block content %}
+              {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
